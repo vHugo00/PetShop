@@ -1,0 +1,24 @@
+Criar um petshop com a autenticação de usuário, onde o usuário nvl "ADM" tenha acesso a tudo, o usuário com nvl de "REC" tenha acesso a criar e editar os cruds, e o usuário do tipo "TOSA" tenha acesso somente as listas.
+
+ADICIONAR(adicionar validação regex no email, na permissao adicionar "USU", adicionar também o middleware utilizando o via_cep para popular o endereço do usuário)
+usuario {
+nome,
+email
+senha
+permissao [ADM, REC, TOSA]
+}
+
+ADICIONAR(realizar o relacionamento utilizando db.Schema.Types.ObjectId, e adicionar também o user_id)
+agendamento { 
+data,
+hora,
+animal_id
+}
+
+ADICIONAR(adicionar especie)
+animal {
+nome,
+raca,
+}
+
+ADICIONAR(adicionar uma função para o agendamento que busque pelo agendamento, mas que relacione com os ids mencionados acima, utilizando o populate)
